@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS GRID</title>
+</head>
+<body>
+    <h1>CSS GRID LAYOUT-A TWO DIMENSIONAL LAYOUT</h1>
+    <h2>INRODUCTION--></h2>
+    <p class="intro"> CSS GRID LAYOUT IS A TWO DIMENSIONAL LATOUT AS COMPARED TO THE FLEX
+        WHICH WAS A ONE DIMENSIONAL LAYOUT SYSTEM. GRID PROPERTY IN CSS WAS INTRODUCED TO SOLVE
+        THE LAYOUT PROBMLEM IN WB PAGES.BY DEFAULT THE GRID PROPERTY IN CSS BEHAVES SIMILAR TO ITS PROPERTIES OF ROWS AND COLUMNS.
+        
+        To get started with the grid property in css we have to set a parent element
+         as a grid with the propertt display:grid and the set the column and row sizes
+         with grid-template-columns and grid-template-rows, and then place its child elements into the grid with grid-column and grid-row.
+         Now let us start with the practical approach of learning CSS GRID LAYOUT.
+    </p>
+    <h2>GRID-TEMPLATE-COLUMNS--></h2>
+    <div class="parent">
+        <div class="child">
+            <div class="box"><p>box1</p></div>
+            <div class="box"><p>box2</p></div>
+            <div class="box"><p>box3</p></div>
+            <div class="box"><p>box4</p></div>
+            <div class="box"><p>box5</p></div>
+            <div class="box"><p>box1</p></div>
+            <div class="box"><p>box2</p></div>
+            <div class="box"><p>box3</p></div>
+            <div class="box"><p>box4</p></div>
+            <div class="box"><p>box5</p></div>
+            <div class="box"><p>box1</p></div>
+            <div class="box"><p>box2</p></div>
+            <div class="box"><p>box3</p></div>
+            <div class="box"><p>box4</p></div>
+            <div class="box"><p>box5</p></div>
+        </div>
+    </div>
+    <p>In the above case first 3 columns are created with a size of 100px then we have applied
+        the CSS grid property i.e display:grid and then by the grid template column property
+        we have repeated the columnns 3 times ecah of 100px and the propert was grid-template-columns:repeat(3,100px).Inside the bracket the colmn was repeated 3times each of 100px.
+    </p>
+    <h2>GRID-TEMPLATE-COLUMN-START--></h2>
+    <p>This is used to specify from which column the item should start.It states that from column line the item will start</p>
+    <div class="parent1">
+        <div class="child1">
+            <div id="box10"><p>box1</p></div>
+            <div class="box"><p>box2</p></div>
+            <div class="box"><p>box3</p></div>
+            <div class="box"><p>box4</p></div>
+            <div class="box"><p>box5</p></div>
+            
+        </div>
+    </div>
+    <p>Here 5 boxes are created and id named with box10 has been given the property grid column
+        start : span 2 means it will start from column1 to column 2
+    </p>
+    <h2>GRID-TEMPLATE-COLUMN-END--></h2>
+    <p>This is used to specify at which column the item should end.It states that from column it will stop displaying the items or for how many columns the item will span.</p>
+    <div class="parent2">
+        <div class="child2">
+            <div class="box"><p>box1</p></div>
+            <div id="box20"><p>box2</p></div>
+            <div class="box"><p>box3</p></div>
+            <div class="box"><p>box4</p></div>
+            <div class="box"><p>box5</p></div>
+            
+        </div>
+    </div>
+    <p>Here 5 boxes are created and id named with box20 has been given the property grid column
+        end : span 2 means it will span and ends in  column 2
+    </p>
+    <h2>GRID-TEMPLATE-ROWS--></h2>
+    <p>The grid-template-rows property specifies the number of the rows in a grid layout.</p>
+    <div class="parent">
+        <div class="child3">
+            <div class="box"><p>box1</p></div>
+            <div class="box"><p>box2</p></div>
+            <div class="box"><p>box3</p></div> 
+        </div>
+    </div>
+    <p> In the above example we have 3 boxes and one in each row and each box occupies the whole container width as we have not specified number of columns.
+        The property which is applied to class3 is grid-template-rows : 1fr 1fr 1fr;
+    </p>
+    <h2>GRID-TEMPLATE-ROW-START--></h2>
+    <p>This is used to specify from which row the item should start.</p>
+    <div class="parent">
+        <div class="child3">
+            <div id="box30"><p>box1</p></div>
+            <div class="box"><p>box2</p></div>
+            <div class="box"><p>box3</p></div> 
+        </div>
+    </div>
+    <p> In the above example we have 3 boxes and one in each row and each box occupies the whole container width as we have not specified number of columns.
+        The property which is applied id box30 is GRID-TEMPLATE-ROW-start:2 so box 2 is appearing first means the row will start from box2.
+
+    </p>
+    <h2>GRID-TEMPLATE-ROW-END--></h2>
+    <p>This is used to specify at which row the item should end.</p>
+    <div class="parent">
+        <div class="child3">
+            <div id="box40"><p>box1</p></div>
+            <div class="box"><p>box2</p></div>
+            <div class="box"><p>box3</p></div> 
+        </div>
+    </div>
+    <p> In the above example we have 3 boxes and one in each row and each box occupies the whole container width as we have not specified number of columns.
+        The property which is applied id box40 is GRID-TEMPLATE-ROW-end:3 so box 3 is appearing last means the row will end at box2.
+
+    </p>
+    <h2>GRID-AUTO-ROWS--></h2>
+    <p>The css grid auto rows property describes about the size of the row content.
+        Or in other words this property sets the size of the rows in which their properties are 
+        not clearly described and any other rows in which their properties are descriped
+        but it can be clearly sized by the grid template rows property.
+    </p>
+    <div class="parent">
+        <div class="child4">
+            <div class="box"><p>box1</p></div>
+            <div class="box"><p>box2</p></div>
+            <div class="box"><p>box3</p></div> 
+            <div class="box"><p>box4</p></div>
+            <div class="box"><p>box5</p></div> 
+        </div>
+    </div>
+    <p> 
+        Here in the child class the grid auto rows property is set to 150px 
+    </p>
+    <h2>GRID-TEMPLATE-ROWS-MINMAX-></h2>
+    <p>If large content of grid items are added but grid sizes are defined then the content overflow will take place the it can be controlled by grid template rows minmax property. 
+    </p>
+    <div class="parent">
+        <div class="child5">
+            <div class="box"><p>box1</p></div>
+            <div class="box"><p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium animi dolor sunt modi dignissimos quod optio tenetur consequuntur expedita provident! Exercitationem architecto quos ducimus officia pariatur, quis doloremque ea rerum! box2</p></div>
+            <div class="box"><p>box3</p></div> 
+            <div class="box"><p>box4</p></div>
+            <div class="box"><p>box5</p></div> 
+        </div>
+    </div>
+    <p> 
+        Here in the  class named child the grid template rows minmax property is set so 
+        we can see in the second box all the contents are arreanged properly. 
+    </p>
+    <h2>GAPS BETWEEN ROWS AND COLUMNS--></h2>
+    <h2>COLUMN GAP--></h2>
+    <p>Here in this case a column gap of 30px is given </p>
+    <div class="parent">
+        <div class="child6">
+            <div class="box"><p>box1</p></div>
+            <div class="box"><p>box2</p></div>
+            <div class="box"><p>box3</p></div>
+            <div class="box"><p>box4</p></div>
+            <div class="box"><p>box5</p></div>
+            <div class="box"><p>box6</p></div>
+            <div class="box"><p>box7</p></div>
+            <div class="box"><p>box8</p></div>
+            <div class="box"><p>box9</p></div>
+            <div class="box"><p>box10</p></div>
+            <div class="box"><p>box11</p></div>
+            <div class="box"><p>box12</p></div>
+            <div class="box"><p>box13</p></div>
+            <div class="box"><p>box14</p></div>
+            <div class="box"><p>box15</p></div>
+        </div>
+    </div>
+    <h2>ROW GAP--></h2>
+    <p>Here in this case a row gap of 30px is given </p>
+    <div class="parent">
+        <div class="child7">
+            <div class="box"><p>box1</p></div>
+            <div class="box"><p>box2</p></div>
+            <div class="box"><p>box3</p></div>
+            <div class="box"><p>box4</p></div>
+            <div class="box"><p>box5</p></div>
+            <div class="box"><p>box6</p></div>
+            <div class="box"><p>box7</p></div>
+            <div class="box"><p>box8</p></div>
+            <div class="box"><p>box9</p></div>
+            <div class="box"><p>box10</p></div>
+            <div class="box"><p>box11</p></div>
+            <div class="box"><p>box12</p></div>
+            <div class="box"><p>box13</p></div>
+            <div class="box"><p>box14</p></div>
+            <div class="box"><p>box15</p></div>
+        </div>
+    </div>
+    <h2>BOTH ROW AND COLUMN GAP--></h2>
+    <p>Here in this case a row gap and column gap of 30px are given </p>
+    <div class="parent">
+        <div class="child8">
+            <div class="box"><p>box1</p></div>
+            <div class="box"><p>box2</p></div>
+            <div class="box"><p>box3</p></div>
+            <div class="box"><p>box4</p></div>
+            <div class="box"><p>box5</p></div>
+            <div class="box"><p>box6</p></div>
+            <div class="box"><p>box7</p></div>
+            <div class="box"><p>box8</p></div>
+            <div class="box"><p>box9</p></div>
+            <div class="box"><p>box10</p></div>
+            <div class="box"><p>box11</p></div>
+            <div class="box"><p>box12</p></div>
+            <div class="box"><p>box13</p></div>
+            <div class="box"><p>box14</p></div>
+            <div class="box"><p>box15</p></div>
+        </div>
+    </div>
+    <h2>GRID TEMPLATE AREAS--></h2>
+    <p>This is one of the most important property in CSS GRID.With this property
+        we can define the navbar main bar the hero section header footer.
+        According to this propert both rows and columns must be equal.
+    </p>
+    <section class="main-frame">
+        <div c;ass="grid-container">
+            <div class="ar navbar"><p>HOME</p> <p>  ABOUTUS  </p> <p>CAREER </p> <p> NEW</p></div>
+            <div class="ar main-section"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. doloribus maiores eligendi voluptatibus molestiae consequuntur cupiditate cumque similique placeat ut.</p></div>
+            <div class="ar aside"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum laudantium omnis eveniet, repellat dolores optio.</p></div>
+            <div class="ar footer"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, dolorum aut.</p></div>
+      
+            
+        </div>
+    </section>
+</body>
+</html>
